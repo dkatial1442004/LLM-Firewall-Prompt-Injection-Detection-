@@ -8,7 +8,7 @@ It includes a FastAPI backend, a machine-learning detection pipeline, SQLite-bas
 
 The firewall sits between the user and an LLM application:
 
-<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/1b10141b-50f9-441d-8fff-9995f1eca47d" />
+<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/1b10141b-50f9-441d-8fff-9995f1eca47d" />
 
 The system combines machine-learning classification with rule-based pattern detection to identify suspicious prompts and provide a risk assessment before they reach the LLM.
 
