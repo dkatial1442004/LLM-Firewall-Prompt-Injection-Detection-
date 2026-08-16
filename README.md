@@ -27,39 +27,30 @@ The system combines machine-learning classification with rule-based pattern dete
 
 
 ## Key Features
-Real-Time Prompt Scanning — analyzes a prompt and returns a risk score and security verdict.
-
-Hybrid Detection — combines a TF-IDF + Logistic Regression classifier with regex-based security rules.
-
-Prompt Injection Detection — identifies common attempts to override instructions or manipulate model behavior.
-
-Risk-Based Decisions — prompts crossing the configured risk threshold are flagged as malicious.
-
-Scan History — stores scanned prompts, scores, and verdicts using SQLite.
-
-Security Dashboard — displays total scans, blocked requests, block rate, and recent activity.
-
-REST API — exposes the detection system through FastAPI endpoints.
-
-Local & Lightweight — uses SQLite instead of requiring a separate database server, making the project easy to run locally.
+- Real-Time Prompt Scanning : analyzes a prompt and returns a risk score and security verdict.
+- Hybrid Detection : combines a TF-IDF + Logistic Regression classifier with regex-based security rules.
+- Prompt Injection Detection : identifies common attempts to override instructions or manipulate model behavior.
+- Risk-Based Decisions : prompts crossing the configured risk threshold are flagged as malicious.
+- Scan History:— stores scanned prompts, scores, and verdicts using SQLite.
+- Security Dashboard : displays total scans, blocked requests, block rate, and recent activity.
+- REST API : exposes the detection system through FastAPI endpoints.
+- Local & Lightweight : uses SQLite instead of requiring a separate database server, making the project easy to run locally.
 
 
 ## How Detection Works
 
-1.TF-IDF converts the incoming prompt into numerical word and bigram features.
-Logistic Regression analyzes these features and estimates how likely the prompt is to represent an attack.
-Regex-based checks identify known suspicious patterns and add an additional risk signal.
-The detection signals are combined into a risk score.
-Prompts scoring ≥ 0.5 are classified as malicious.
+-TF-IDF converts the incoming prompt into numerical word and bigram features.
+-Logistic Regression analyzes these features and estimates how likely the prompt is to represent an attack.
+-Regex-based checks identify known suspicious patterns and add an additional risk signal.
+-The detection signals are combined into a risk score.
+-Prompts scoring ≥ 0.5 are classified as malicious.
 
 
 ## Tech Stack
 
-Backend: Python · FastAPI · Pydantic · Scikit-learn · SQLite
-
-Machine Learning: TF-IDF · Logistic Regression · Regex Pattern Matching
-
-Frontend: React · TypeScript · Vite · Tailwind CSS · Recharts · Lucide React
+- Backend: Python · FastAPI · Pydantic · Scikit-learn · SQLite
+- Machine Learning: TF-IDF · Logistic Regression · Regex Pattern Matching
+- Frontend: React · TypeScript · Vite · Tailwind CSS · Recharts · Lucide React
 
 ## Run it locally
 
