@@ -25,8 +25,8 @@ The system combines machine-learning classification with rule-based pattern dete
 
 ## Key Features
 1.Real-Time Prompt Scanning — analyzes a prompt and returns a risk score and security verdict.
-2. Hybrid Detection — combines a TF-IDF + Logistic Regression classifier with regex-based security rules.
-3. Prompt Injection Detection — identifies common attempts to override instructions or manipulate model behavior.
+2.Hybrid Detection — combines a TF-IDF + Logistic Regression classifier with regex-based security rules.
+3.Prompt Injection Detection — identifies common attempts to override instructions or manipulate model behavior.
 4. Risk-Based Decisions — prompts crossing the configured risk threshold are flagged as malicious.
 5. Scan History — stores scanned prompts, scores, and verdicts using SQLite.
 6. Security Dashboard — displays total scans, blocked requests, block rate, and recent activity.
@@ -36,7 +36,7 @@ The system combines machine-learning classification with rule-based pattern dete
 
 ## How Detection Works
 
-TF-IDF converts the incoming prompt into numerical word and bigram features.
+1.TF-IDF converts the incoming prompt into numerical word and bigram features.
 Logistic Regression analyzes these features and estimates how likely the prompt is to represent an attack.
 Regex-based checks identify known suspicious patterns and add an additional risk signal.
 The detection signals are combined into a risk score.
