@@ -20,7 +20,7 @@ The system combines machine-learning classification with rule-based pattern dete
 - Hybrid Detection : combines a TF-IDF + Logistic Regression classifier with regex-based security rules.
 - Prompt Injection Detection : identifies common attempts to override instructions or manipulate model behavior.
 - Risk-Based Decisions : prompts crossing the configured risk threshold are flagged as malicious.
-- Scan History:— stores scanned prompts, scores, and verdicts using SQLite.
+- Scan History: It stores scanned prompts, scores, and verdicts using SQLite.
 - Security Dashboard : displays total scans, blocked requests, block rate, and recent activity.
 - REST API : exposes the detection system through FastAPI endpoints.
 - Local & Lightweight : uses SQLite instead of requiring a separate database server, making the project easy to run locally.
@@ -37,7 +37,7 @@ The system combines machine-learning classification with rule-based pattern dete
 
 ## Tech Stack
 
-- Backend: Python · FastAPI , Pydantic , Scikit-learn , SQLite
+- Backend: Python , FastAPI , Pydantic , Scikit-learn , SQLite
 - Machine Learning: TF-IDF , Logistic Regression , Regex Pattern Matching
 - Frontend: React , TypeScript , Vite · Tailwind CSS , Recharts , Lucide React
 
