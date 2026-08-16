@@ -8,19 +8,8 @@ It includes a FastAPI backend, a machine-learning detection pipeline, SQLite-bas
 
 The firewall sits between the user and an LLM application:
 
-User Prompt
-     ↓
-LLM Firewall
-     ↓
-Risk Analysis
-     ├── ML Classifier
-     └── Rule-Based Checks
-     ↓
-Risk Score + Verdict
-     ↓
-Allow / Flag / Block
-     ↓
-LLM
+<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/1b10141b-50f9-441d-8fff-9995f1eca47d" />
+
 The system combines machine-learning classification with rule-based pattern detection to identify suspicious prompts and provide a risk assessment before they reach the LLM.
 
 <img width="732" height="730" alt="image" src="https://github.com/user-attachments/assets/1de4ab9f-3614-4072-bc21-1fdcb1b7df96" />
@@ -39,18 +28,18 @@ The system combines machine-learning classification with rule-based pattern dete
 
 ## How Detection Works
 
--TF-IDF converts the incoming prompt into numerical word and bigram features.
--Logistic Regression analyzes these features and estimates how likely the prompt is to represent an attack.
--Regex-based checks identify known suspicious patterns and add an additional risk signal.
--The detection signals are combined into a risk score.
--Prompts scoring ≥ 0.5 are classified as malicious.
+- TF-IDF converts the incoming prompt into numerical word and bigram features.
+- Logistic Regression analyzes these features and estimates how likely the prompt is to represent an attack.
+- Regex-based checks identify known suspicious patterns and add an additional risk signal.
+- The detection signals are combined into a risk score.
+- Prompts scoring ≥ 0.5 are classified as malicious.
 
 
 ## Tech Stack
 
-- Backend: Python · FastAPI · Pydantic · Scikit-learn · SQLite
-- Machine Learning: TF-IDF · Logistic Regression · Regex Pattern Matching
-- Frontend: React · TypeScript · Vite · Tailwind CSS · Recharts · Lucide React
+- Backend: Python · FastAPI , Pydantic , Scikit-learn , SQLite
+- Machine Learning: TF-IDF , Logistic Regression , Regex Pattern Matching
+- Frontend: React , TypeScript , Vite · Tailwind CSS , Recharts , Lucide React
 
 ## Run it locally
 
