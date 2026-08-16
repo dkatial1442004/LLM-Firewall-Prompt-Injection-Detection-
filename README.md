@@ -23,15 +23,25 @@ Allow / Flag / Block
 LLM
 The system combines machine-learning classification with rule-based pattern detection to identify suspicious prompts and provide a risk assessment before they reach the LLM.
 
+<img width="732" height="730" alt="image" src="https://github.com/user-attachments/assets/1de4ab9f-3614-4072-bc21-1fdcb1b7df96" />
+
+
 ## Key Features
-1.Real-Time Prompt Scanning — analyzes a prompt and returns a risk score and security verdict.
-2.Hybrid Detection — combines a TF-IDF + Logistic Regression classifier with regex-based security rules.
-3.Prompt Injection Detection — identifies common attempts to override instructions or manipulate model behavior.
-4. Risk-Based Decisions — prompts crossing the configured risk threshold are flagged as malicious.
-5. Scan History — stores scanned prompts, scores, and verdicts using SQLite.
-6. Security Dashboard — displays total scans, blocked requests, block rate, and recent activity.
-7. REST API — exposes the detection system through FastAPI endpoints.
-8. Local & Lightweight — uses SQLite instead of requiring a separate database server, making the project easy to run locally.
+Real-Time Prompt Scanning — analyzes a prompt and returns a risk score and security verdict.
+
+Hybrid Detection — combines a TF-IDF + Logistic Regression classifier with regex-based security rules.
+
+Prompt Injection Detection — identifies common attempts to override instructions or manipulate model behavior.
+
+Risk-Based Decisions — prompts crossing the configured risk threshold are flagged as malicious.
+
+Scan History — stores scanned prompts, scores, and verdicts using SQLite.
+
+Security Dashboard — displays total scans, blocked requests, block rate, and recent activity.
+
+REST API — exposes the detection system through FastAPI endpoints.
+
+Local & Lightweight — uses SQLite instead of requiring a separate database server, making the project easy to run locally.
 
 
 ## How Detection Works
